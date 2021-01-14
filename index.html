@@ -739,6 +739,162 @@ function choose_state(){
           </div>
         </div>
         <hr>
+
+<div class="row">
+  <button class="btn btn-secondary  form-control" type="button" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7">
+    Javascrip + HTML - Contact Form - Emailjs
+  </button>
+
+</div>
+<div class="row">
+  <div class="collapse" id="collapseExample7">
+    
+    <script type="text/plain" class="language-markup">
+<section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">    
+  <div class="overlay-mf"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="contact-mf">
+          <div id="contact" class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="title-box-2">
+                  <h5 class="title-left">
+                    Send Me A Message
+                  </h5>
+                </div>
+                <div>
+                  <form id="form">
+                    <div class="row">
+                      <div class="col-md-12 mb-3">
+                        <div class="form-group">
+                          <input type="text" name="from_name"      class="form-control" id="from_name" placeholder="Your Name" 
+                          data-rule="minlen:4" data-msg="Please enter at least 4 chars"  required/>
+                          <div class="validate"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-3">
+                        <div class="form-group">
+                          <input type="email" class="form-control" name="reply_to" id="reply_to" 
+                          placeholder="Your Email" data-rule="email" 
+                          data-msg="Please enter a valid email" required />
+                          <div class="validate"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-3">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="subject" id="subject" 
+                          placeholder="Subject" data-rule="minlen:4" 
+                          data-msg="Please enter at least 8 chars of subject" required />
+                          <div class="validate"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea class="form-control" name="message" rows="5" data-rule="required" 
+                          data-msg="Please write something for us" 
+                          placeholder="Tell me, I'm listening..." required></textarea>
+                          <div class="validate"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 text-center">
+                        <button type="submit" id="button" class="button button-a button-big 
+                        button-rouded">Send Message</button>
+                      </div>
+
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="title-box-2 pt-4 pt-md-0">
+                  <h5 class="title-left">
+                    Get in Touch
+                  </h5>
+                </div>
+                <div class="more-info">
+                  <p class="lead">
+                    I loving making new friends every days, you can contact me by pressing
+                     pictures below to see my social media site.
+                  </p>
+                  <ul class="list-ico">
+                    <li><span class="ion-ios-location"></span>Lincoln, NE 68502</li>
+                    <li><span class="ion-ios-telephone"></span> (402)-304-0329</li>
+                    <li><span class="ion-email"></span> arthastheking113@gmail.com</li>
+                  </ul>
+                </div>
+                <div class="socials">
+                  <ul>
+                    <li><a href="https://www.facebook.com/king.mountain.9/"><span class="ico-circle">
+                      <i class="ion-social-facebook"></i></span></a></li>
+                    <li><a href="https://www.instagram.com/duylanle97/"><span class="ico-circle">
+                      <i class="ion-social-instagram"></i></span></a></li>
+                    <li><a href="https://twitter.com/DuyLanLe3"><span class="ico-circle">
+                      <i class="ion-social-twitter"></i></span></a></li>
+                    <li><a href="https://www.linkedin.com/in/duy-lan-le-445262163/">
+                      <span class="ico-circle"><i class="fa fa-linkedin-square"></i></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+<!-- End HTML -->
+
+<!-- Begin Javascript -->
+      </script>   
+      <pre class="language-js"><code>
+const btn = document.getElementById('button1');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_l780ebr';
+   const templateID = 'template_orq65se';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Yay!!! You just sent me a message!!!',
+        showConfirmButton: false,
+        timer: 2000
+    });
+      document.getElementById("form").reset();
+    }, (err) => {
+      btn.value = 'Send Email';
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+        showConfirmButton: false,
+        timer: 2000
+      });
+    });
+    document.getElementById("form").reset();
+});
+       </code></pre>  
+  </div>
+</div>
+
+
+<hr>
+
+
+        
         <div class="row">
           <button class="btn btn-secondary  form-control" type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6">
             Javascrip + HTML - Chart description - canvasjs.com
@@ -974,159 +1130,7 @@ return Math.floor(Math.random() * range) + Number;
 
 <hr>
 
-<div class="row">
-  <button class="btn btn-secondary  form-control" type="button" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7">
-    Javascrip + Javascript - Contact Form - Emailjs
-  </button>
 
-</div>
-<div class="row">
-  <div class="collapse" id="collapseExample7">
-    
-    <script type="text/plain" class="language-markup">
-<section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
-  <div class="overlay-mf"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="contact-mf">
-          <div id="contact" class="box-shadow-full">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="title-box-2">
-                  <h5 class="title-left">
-                    Send Me A Message
-                  </h5>
-                </div>
-                <div>
-                  <form id="form">
-                    <div class="row">
-                      <div class="col-md-12 mb-3">
-                        <div class="form-group">
-                          <input type="text" name="from_name" class="form-control" id="from_name" 
-                          placeholder="Your Name" data-rule="minlen:4" 
-                          data-msg="Please enter at least 4 chars"  required/>
-                          <div class="validate"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <div class="form-group">
-                          <input type="email" class="form-control" name="reply_to" id="reply_to" 
-                          placeholder="Your Email" data-rule="email" 
-                          data-msg="Please enter a valid email" required />
-                          <div class="validate"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="subject" id="subject" 
-                          placeholder="Subject" data-rule="minlen:4" 
-                          data-msg="Please enter at least 8 chars of subject" required />
-                          <div class="validate"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <textarea class="form-control" name="message" rows="5" data-rule="required" 
-                          data-msg="Please write something for us" 
-                          placeholder="Tell me, I'm listening..." required></textarea>
-                          <div class="validate"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-12 text-center">
-                        <button type="submit" id="button" class="button button-a button-big 
-                        button-rouded">Send Message</button>
-                      </div>
-
-                    </div>
-                  </form>
-
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="title-box-2 pt-4 pt-md-0">
-                  <h5 class="title-left">
-                    Get in Touch
-                  </h5>
-                </div>
-                <div class="more-info">
-                  <p class="lead">
-                    I loving making new friends every days, you can contact me by pressing
-                     pictures below to see my social media site.
-                  </p>
-                  <ul class="list-ico">
-                    <li><span class="ion-ios-location"></span>Lincoln, NE 68502</li>
-                    <li><span class="ion-ios-telephone"></span> (402)-304-0329</li>
-                    <li><span class="ion-email"></span> arthastheking113@gmail.com</li>
-                  </ul>
-                </div>
-                <div class="socials">
-                  <ul>
-                    <li><a href="https://www.facebook.com/king.mountain.9/"><span class="ico-circle">
-                      <i class="ion-social-facebook"></i></span></a></li>
-                    <li><a href="https://www.instagram.com/duylanle97/"><span class="ico-circle">
-                      <i class="ion-social-instagram"></i></span></a></li>
-                    <li><a href="https://twitter.com/DuyLanLe3"><span class="ico-circle">
-                      <i class="ion-social-twitter"></i></span></a></li>
-                    <li><a href="https://www.linkedin.com/in/duy-lan-le-445262163/">
-                      <span class="ico-circle"><i class="fa fa-linkedin-square"></i></span></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Contact Section -->
-
-<!-- End HTML -->
-
-<!-- Begin Javascript -->
-      </script>   
-      <pre class="language-js"><code>
-const btn = document.getElementById('button1');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'service_l780ebr';
-   const templateID = 'template_orq65se';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Yay!!! You just sent me a message!!!',
-        showConfirmButton: false,
-        timer: 2000
-    });
-      document.getElementById("form").reset();
-    }, (err) => {
-      btn.value = 'Send Email';
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
-        showConfirmButton: false,
-        timer: 2000
-      });
-    });
-    document.getElementById("form").reset();
-});
-       </code></pre>  
-  </div>
-</div>
-
-
-<hr>
 </div>
 </section>
 <!-- End content Section -->
